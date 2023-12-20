@@ -14,16 +14,16 @@ public class NetworkEventCustomManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown("["))
-        //{
-        //    NetworkManager.Singleton.StartHost();
-        //  //  NetworkManager.Singleton.
-        //}
-        //if (Input.GetKeyDown("]"))
-        //{
-        //    NetworkManager.Singleton.StartClient();
+        if (Input.GetKeyDown("["))
+        {
+            NetworkManager.Singleton.StartHost();
+            //  NetworkManager.Singleton.
+        }
+        if (Input.GetKeyDown("]"))
+        {
+            NetworkManager.Singleton.StartClient();
 
-        //}
+        }
     }
 
     public void startHost()
