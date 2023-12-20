@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: aae66500558661747826c9333bb0c630
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fpsCam: {fileID: 1191496236230670254, guid: b9f81f5acc82c2a4d9a862d72bb7a04f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
