@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
 
     public NavMeshAgent agent;
-    public Transform player;
+    Transform player;
     public LayerMask WhatIsGround, WhatIsPlayer;
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -31,9 +31,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
-        if (GameObject.Find("Player"))
+        if (GameObject.FindGameObjectsWithTag("Player")[0])
         {
-            player = GameObject.Find("Player").transform;
+            player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
+            
         }
         else
         {
@@ -111,7 +112,7 @@ public class Enemy : MonoBehaviour
 
     private void AttackPlayer()
     {
-        Debug.Log(player.transform.position);
+        Debug.Log(player.localPosition);
         agent.SetDestination(transform.position);
         transform.LookAt(player);
         if (!alreadyAtacked)

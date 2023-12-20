@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     Collider projectileCollider;
+    public GameObject explosion;
  
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,14 @@ public class EnemyProjectile : MonoBehaviour
             
            // playersHealth.SetHealth(playersHealth.GetHealth() - damageToInflict);
 
-            Destroy(gameObject);
+            Destroy(this);
 
+        }
+        else
+        {
+            Debug.Log("projectile: hit other collider");
+            Instantiate(explosion, transform);
+            Destroy(this);
         }
        
     }
