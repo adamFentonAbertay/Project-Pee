@@ -112,7 +112,7 @@ public class Enemy : MonoBehaviour
 
     private void AttackPlayer()
     {
-        Debug.Log(player.localPosition);
+    
         agent.SetDestination(transform.position);
         transform.LookAt(player);
         if (!alreadyAtacked)
