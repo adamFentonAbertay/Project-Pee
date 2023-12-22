@@ -6,10 +6,11 @@ using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class OnMainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class OnMainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public int buttonCode;
+    
     string og;
+    public Animator cameraAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,11 @@ public class OnMainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         GetComponent<TextMeshProUGUI>().text = hoverOverMsg;
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+
+    }
+
     public void OnPointerExit(PointerEventData eventData)
     {
         // Mouse pointer exited the UI element
@@ -31,12 +37,27 @@ public class OnMainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         GetComponent<TextMeshProUGUI>().text = og;
     }
 
-    public void sceneLoad(int ID)
+    public void menuCommand(int ID)
     {
-        if (ID == 1)
+       switch (ID)
+
         {
+            case 1:
             SceneManager.LoadScene("SampleScene");
+                break;
+
+            case 2:
+                cameraAnimator.SetInteger("MenuState", 2);
+                break;
+            case 3:
+                cameraAnimator.SetInteger("MenuState", 1);
+                break;
+            case 4:
+                cameraAnimator.SetInteger("MenuState", 3);
+                break;
+
         }
+        
     }
 
     private void OnMouseEnter()
