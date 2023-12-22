@@ -89,6 +89,10 @@ PrefabInstance:
       value: Lantern Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8395186034343294871, guid: 200e416b13af6194f822fdce25d04efc, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395186034343294871, guid: 200e416b13af6194f822fdce25d04efc, type: 3}
       propertyPath: MaxDistance
       value: 15
       objectReference: {fileID: 0}

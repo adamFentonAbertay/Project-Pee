@@ -39,7 +39,8 @@ public class OnMainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void menuCommand(int ID)
     {
-       switch (ID)
+        GetComponent<TextMeshProUGUI>().text = og;
+        switch (ID)
 
         {
             case 1:
